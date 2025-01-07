@@ -44,6 +44,7 @@ jobs:
 
   section_07_deploy_app_to_railway:
     <<: *defaults
+    working_directory: ~/project/section-07-ci-and-publishing/house-prices-api
     steps:
       - checkout:
           path: ~/project/
@@ -54,7 +55,7 @@ jobs:
       - run:
           name: Deploy to Railway App (You must set RAILWAY_TOKEN env var)
           command: |
-            cd section-07-ci-and-publishing/house-prices-api && railway up --verbose
+            railway up --verbose
 
   section_07_test_and_upload_regression_model:
     <<: *defaults
