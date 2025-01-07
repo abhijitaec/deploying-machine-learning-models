@@ -282,12 +282,12 @@ workflows:
       - section_07_test_and_upload_regression_model:
           <<: *tags_only
 
-      - section_08_deploy_app_container_via_railway:
-         filters:
-           branches:
-             only:
-               - master
-               - demo
+      # - section_08_deploy_app_container_via_railway:
+      #    filters:
+      #      branches:
+      #        only:
+      #          - master
+      #          - demo
 
 #  test-all:
 #    jobs:
